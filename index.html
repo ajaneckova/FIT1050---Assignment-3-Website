@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "robots" content = "noindex,nofollow">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <style>
+        body {
+        font-family: 'Playfair Display';font-size: 22px;
+        }
+    </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+        function showMessage() {
+          alert( 'JavaScript!' );
+        }
+    </script>
+
+</head>
+<body>
+    
+
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!--Nav Logo-->
+            <div class="cs-align">
+            <div class="topnav">
+                <a href="" class="cs-logo" aria-label="back to home">
+                    <img src="images/Logo.jpg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+                </a>
+                <form class="p-3">
+                    <div class="col-12 col-md-8 container">
+                        <input id="search-bar" placeholder="search...">
+                    </div>
+                </form>
+                <a href="" class="cs-nav-link">
+                    <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="images/user.jpg" alt="favourites, user and shopping cart icons" height="29">
+                </a>
+            </div>
+            <div class="bottomnav">
+            <!--Navigation List-->
+            <nav class="cs-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <a href="" class="cs-li-link">
+                                        Home
+                                    </a>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="cs-li">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <a href="" class="cs-li-link">
+                                        Shop products
+                                    </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="">Best Sellers</a>
+                                    <a href="">Scents for Women </a>
+                                    <a href="">Scents for Men</a>
+                                    <a href="">Perfumes</a>
+                                    <a href="">Blends</a>
+                                    <a href="">Rollers</a>
+                                    <a href="">Accessories</a>
+                                    <a href="">Candles</a>
+                                    <a href="">Scented Wax Tablets</a>
+                                    <a href="">Gift Vouchers</a>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="cs-li">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <a href="" class="cs-li-link">
+                                        Workshops
+                                    </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href=""> Aromatherapy Foundations</a>
+                                    <a href="">Essential Oil Blending </a>
+                                    <a href="">Perfume Creation</a>
+                                    <a href="">Wellbeing Workshop </a>
+                                    <a href="">Home Aromatherapy</a>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="cs-li">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <a href="" class="cs-li-link">
+                                        Aromatherapy Consultations
+                                    </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="">Natural Perfume Consultation</a>
+                                    <a href="">Holistic Aromatherapy Consultation</a>
+                                    <a href="">Aromatherapy Consultation for Seniors & Caregivers</a>
+                                    <a href="">Bridal Essence Clinical Aromatherapy Consultation</a>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="cs-li">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <a href="" class="cs-li-link">
+                                        Blog
+                                    </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="">Featured Blogs & Articles</a>
+                                    <a href="">Daily Blog</a>
+                                    <a href="">Benefits of Aromatherapy</a>
+                                    <a href="">Improving your Wellbeing</a>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="cs-li">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                    <a href="" class="cs-li-link">
+                                        About Us
+                                    </a>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="">Our Story</a>
+                                    <a href="">Contact Us</a>
+                                    <a href="">Social Media</a>
+                                    <a href="">FAQs</a>
+                                    <a href="">Terms & Conditions</a>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="cs-li">
+                            <a href="" class="cs-button-solid cs-nav-button"><b>BOOK CONSULTATION</b></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        </div>
+        </div>
+    </header>
+                                
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-1619">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">Scents can <em>profoundly</em> change your <b>emotions</b>!</h1>
+                <div class="cs-align">
+                    <a href="" class="cs-button-white">
+                        FIND YOUR SCENT
+                    </a>
+                    <a href="" class="cs-button-solid">DISCOVER MORE</a>
+                </div>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="images/1.jpg" data-fancybox = 'gallery' data-caption="Shop Products" class="image-gallery">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="images/1.jpg" alt="hand holding serum bottle">
+                    </a>
+                    <h3 class="cs-h3">
+                        <a href="" class="cs-link">
+                            Shop Products
+                        </a>
+                    </h3>
+                </li>
+                <li class="cs-item">
+                    <a href="images/3.jpg" data-fancybox = 'gallery' data-caption="Workshops" class="image-gallery">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="images/3.jpg" alt="flower petals in glass">
+                    </a>
+                    <h3 class="cs-h3">
+                        <a href="" class="cs-link">
+                            Workshops
+                        </a>
+                    </h3>
+                </li>
+                <li class="cs-item">
+                    <a href="images/2.jpg" data-fancybox = 'gallery' data-caption="Consultations" class="image-gallery">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="images/2.jpg" alt="tea set with herbs">
+                    </a>
+                    <h3 class="cs-h3">
+                        <a href="" class="cs-link">
+                            Consultations
+                        </a>
+                    </h3>
+                </li>
+                <li class="cs-item">
+                    <a href="images/4.jpg" data-fancybox = 'gallery' data-caption="Blog" class="image-gallery">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="images/4.jpg" alt="macbook, flower bouquet and magazines on a table">
+                    </a>
+                    <h3 class="cs-h3">
+                        <a href="" class="cs-link">
+                            Blog
+                        </a>
+                    </h3>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="images/product3.jpg">
+            <source media="(min-width: 601px)" srcset="images/product3.jpg">
+            <img decoding="async" src="images/product3.jpg" alt="woman in a flower field" width="2250" height="1500" aria-hidden="true">
+        </picture>
+    </section>
+                                
+
+    <script src = "js/script.js"> 
+    </script>
+
+    <!-- ============================================ -->
+    <!--                  Products                   -->
+    <!-- ============================================ -->
+
+    <section id="services-1628">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Our Products</span>
+                    <h2 class="cs-title">Best Sellers</h2>
+                </div>
+                <p class="cs-text">
+                    Essential Oils in our day to day living have countless therapeutic benefits, they directly impact the limbic area of the brain, our emotional, intuitive and creative pathways and they enhance and support holistic wellbeing.
+                </p>
+            </div>              
+            <ul class="cs-card-group">  
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="images/product1.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="images/product1.jpg">
+                            <img loading="lazy" decoding="async" src="images/product1.jpg" alt="glass serum bottle surrounded by orange and yellow flowers" width="413" height="420">
+                            <span class="cs-fake-link">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="5" height="5" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                        </picture>
+                        <h3 class="cs-h3">AMBROSIA</h3>
+                        <p class="cs-item-text">
+                            A light, clean scent with musky, amber and floral hints. Ambrosia is a fragrance that exudes opulence and decadence.
+                        </p>
+                        <p class="cs-item-text">
+                            $57.00
+                        </p>
+                        <p>
+                            <span class="fa fa-star checked" ></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star not"></span>
+                            <span class="text">(104)</span>
+                        </p>
+                        
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="images/product2.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="images/product2.jpg">
+                            <img loading="lazy" decoding="async" src="images/product2.jpg" alt="glass serum bottles with flowers  " width="413" height="420">
+                            <span class="cs-fake-link">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="5" height="5" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                        </picture>
+                        <h3 class="cs-h3">EPIPHANY</h3>
+                        <p class="cs-item-text">
+                            A very subtle soft, sweet, musky and floral scent, it gives you a clean and fresh feeling, a comforting and attractive scent.
+                        </p>
+                        <p class="cs-item-text">
+                            $42.00
+                        </p>
+                        <p>
+                            <span class="fa fa-star checked" ></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star not"></span>
+                            <span class="fa fa-star not"></span>
+                            <span class="text">(89)</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="images/product4.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="images/product4.jpg">
+                            <img loading="lazy" decoding="async" src="images/product4.jpg" alt="essential oil bottle placed on pink rose petals" width="413" height="420">
+                            <span class="cs-fake-link">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="5" height="5" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                        </picture>
+                        <h3 class="cs-h3">ROSE PETALS</h3>
+                        <p class="cs-item-text">
+                            A fragrant blend of sweet, floral, and slightly spicy notes, with an underlying warmth, soothing and relaxing properties 
+                        </p>
+                        <p class="cs-item-text">
+                            $63.00
+                        </p>
+                        <p>
+                            <span class="fa fa-star checked" ></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star not"></span>
+                            <span class="text">(71)</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="images/product6.jpg">
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset="images/product6.jpg">
+                            <img loading="lazy" decoding="async" src="images/product6.jpg" alt="essential oil bottle placed on a decorative tree trunk" width="413" height="420">
+                            <span class="cs-fake-link">
+                                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="5" height="5" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                        </picture>
+                        <h3 class="cs-h3">SANDALWOOD</h3>
+                        <p class="cs-item-text">
+                            A deep, creamy sweetness with warm undertones of amber, leather and wood, creating a comforting and natural scent.
+                        </p>
+                        <p class="cs-item-text">
+                            $48.00
+                        </p>
+                        <p>
+                            <span class="fa fa-star checked" ></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star not"></span>
+                            <span class="text">(65)</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- ============================================ -->
+    <!--                Meet The Team                 -->
+    <!-- ============================================ -->
+
+    <section id="blog-986">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Blogs & Articles</span>
+                    <h2 class="cs-title">Explore Our Recent Blogs</h2>
+                </div>
+                <a href="" class="cs-button-solid">View All</a>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="images/passionflower.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="images/passionflower.jpg">
+                        <img loading="lazy" decoding="async" src="images/passionflower.jpg" alt="purple passionflower" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-date">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/calendar.svg" alt="stylist" width="20" height="20">
+                            March 26, 2024
+                        </span>
+                        <h3 class="cs-h3"><a href="" class="cs-link">Passionflower & Passion Week</a></h3>
+                        <span class="cs-desc">
+                            Passionflower (Passiflora incarnata) does wondrous things to induce sleep and relaxation, it is also known to treat restlessness and agitation...
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="images/scent-tablets-rose.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="images/scent-tablets-rose.jpg">
+                        <img loading="lazy" decoding="async" src="images/scent-tablets-rose.jpg" alt="white heartshaped scented tablets with rose petals" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-date">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/calendar.svg" alt="stylist" width="20" height="20">
+                            February 8, 2024
+                        </span>
+                        <h3 class="cs-h3"><a href="" class="cs-link">Let's talk about Relationships</a></h3>
+                        <span class="cs-desc">
+                            We live in a world that is so connected more than we have ever been throughout history yet so many of us feel lonely, disconnected and isolated...
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="images/garden.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="images/garden.jpg">
+                        <img loading="lazy" decoding="async" src="images/garden.jpg" alt="woman holding a basket with yellow flowers" width="413" height="480">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-date">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/calendar.svg" alt="stylist" width="20" height="20">
+                            September 26, 2023
+                        </span>
+                        <h3 class="cs-h3"><a href="" class="cs-link">Goodbye Winter, Hello Spring!</a></h3>
+                        <span class="cs-desc">
+                            Its time to shake off the Winter Blues and step into Spring, when Mother Nature gets to display her glory with flowers of every colour, perfuming the air...
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                     CTA                      -->
+    <!-- ============================================ -->
+
+    <section id="cta-1394">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Subscribe</span>
+                <h2 class="cs-title">Want to <em>immerse</em> yourself in the world of <b>scents</b>?</h2>
+                <p class="cs-text">
+                    <em>Subscribe to our newsletter!</em>
+                </p>
+                <form class="cs-form" name="Contact Form" method="post">
+                    <input class="cs-input" type="email" id="cs-email-1394" name="find-us" placeholder="Enter your email address...">
+                    <button class="cs-button-solid cs-submit" type="submit">SUBSCRIBE NOW</button>
+                </form>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="images/subscribe.jpg">
+            <source media="(min-width: 601px)" srcset="images/subscribe.jpg">
+            <img loading="lazy" decoding="async" src="images/subscribe.jpg" alt="flower petals immersed in water" width="1920" height="486" aria-hidden="true">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Locations                   -->
+    <!-- ============================================ -->
+
+    <section id="locations-1697">
+        <div class="cs-container">
+            <h3 class="cs-h3">Acknowledgement of Country</h3>
+            <p class="cs-item-text cs-address">
+                Scent of Life wishes to acknowledge that our store operates on the land of the Wurundjeri people, the Traditional Owners of the land. We acknowledge that First Nations sovereignty was never ceded and pay our respects to Elders, past and present as well as all Aboriginal and Torres Strait Islander people today, recognising their continual connection to the land, sea and community.
+            </p>
+        </div>
+    </section>
+                                
+                                    
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+    <footer id="cs-footer-1292">
+        <div class="cs-container">      
+            <!-- Logo Group -->
+            <div class="cs-logo-group">
+                <a aria-label="go back to home" class="cs-logo" href="">
+                    <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="images/Logo2.jpg" alt="logo" width="240" height="32">
+                </a>
+                <p>
+                    <a href="" class="cs-nav-link">
+                        <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="images/mail.jpg" alt="mail icon" height="24">
+                        angela@scentoflife.com.au
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="cs-nav-link">
+                        <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="images/phone.jpg" alt="phone icon" height="24">
+                        +61 390 787 758
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="cs-nav-link">
+                        <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="images/mapicon.jpg" alt="map icon" height="24">
+                        428a Toorak Rd, Toorak VIC 3142
+                    </a>
+                </p>
+                <p>
+                    <a href="" class="cs-nav-link">
+                        <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="images/map.jpg" alt="map showing store location" height="250">
+                    </a>
+                </p>
+            </div>
+            <!-- Links -->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Orders & Support</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Track Your Order</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Return Policy</a>
+                </li>
+                <li class="cs-nav-li">
+                    <span class="cs-header">Customer Service</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Shipping Information</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Payment Options</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Terms & Conditions</a>
+                </li>
+            </ul>
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">About Us</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Our Story</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Contact Us</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Location</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">FAQ</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Blogs & Articles</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Social Media</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Reviews</a>
+                </li>
+            </ul>
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Your Account</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Log in</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Sign up</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Shopping Cart</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Favourites</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Reset Password</a>
+                </li>
+            </ul>
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Help</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Get Help</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">FAQ</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Contact us</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Order Support</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="">Returns</a>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <p>
+                <a href="" class="cs-nav-link">
+                    <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="images/media.jpg" alt="social media icons" height="40">
+                </a>
+            </p>
+            <span class="cs-copyright">Copyright© 2023. 
+                <a class="cs-copyright-link" href="">Scent of Life.</a>
+                All Right Reserved.
+            </span>
+            <a href="" class="cs-copyright-link">Terms of Service</a>
+            <a href="" class="cs-copyright-link">Privacy Policy</a>
+        </div>
+    </footer>
+                                    
+
+</body>
+
+</html>
+
